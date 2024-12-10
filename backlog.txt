@@ -1,0 +1,12 @@
+Backlog
+- try css shadow under flower
+- clean up css
+- image+text in leaf in demo app (toggle?)
+- leaf hover when cursor over content (try set :hover from js)
+- close when clicked outside
+- code cleanup in js, see comments there
+- move leaf template svg fully to js?
+- parameter: angle for first leaf
+- round corners and arc in leaf shape
+- experiment with animation
+- check how it looks on devices with different dpi

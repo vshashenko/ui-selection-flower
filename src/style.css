@@ -1,0 +1,155 @@
+.selection-flower-container {
+  display: inline-block;
+  position: absolute;
+  box-sizing: border-box;
+
+/*  width: 130px;*/
+/*  height: 130px;*/
+
+  --leaf-cutoff: 0.3;
+  --leaf-gap: 4;
+
+  visibility: hidden;
+}
+
+.selection-flower-container > svg.leaf {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  box-sizing: border-box;
+}
+
+/* leaf styling */
+.selection-flower-container > svg.leaf {
+  fill: #fbfbfc;
+  stroke: grey;
+  stroke-width: 0.5;
+  stroke-linejoin: round;
+}
+
+.selection-flower-container > svg.leaf > use:hover {
+  fill: rgb(231,231,232);
+  stroke: black;
+}
+
+/* TODO MOVE TO ANOTHER FILE */
+
+/* child items as content in a leaf */
+.selection-flower-container#tab-flower > :not(svg.leaf) {
+  display: inline;
+  position: absolute;
+  white-space: nowrap;
+  cursor: default;
+  
+  pointer-events: none;
+  width: 10%;
+  height: 10%;
+/*  fill: grey;*/
+  text-align: center;
+
+  background-color: transparent;
+  transform: translate(-50%, -50%);
+}
+
+.selection-flower-container#tab-flower > :not(svg.leaf):hover {
+  fill: black;
+}
+
+.selection-flower-container#tab-flower {
+  transform: translate(-50%, -50%);
+  left: 218px;
+  top: 24px;
+
+  width: 230px;
+  height: 230px;
+}
+
+.selection-flower-container.shown#tab-flower {
+  visibility: visible;
+}
+
+.selection-flower-container#status-flower > :not(svg.leaf) {
+  display: inline;
+  position: absolute;
+  white-space: nowrap;
+  cursor: default;
+  
+  pointer-events: none;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+
+  background-color: transparent;
+  transform: translate(-50%, -50%);
+}
+
+.selection-flower-container#status-flower > :not(svg.leaf):hover {
+  fill: black;
+}
+
+.selection-flower-container.shown#status-flower {
+  visibility: visible;
+}
+
+.selection-flower-container#status-flower {
+  transform: translate(-50%, -50%);
+  left: 458px;
+  top: 324px;
+  width: 130px;
+  height: 130px;
+}
+
+
+div#parameters {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  width: 230px;
+}
+
+div#gap {
+  height: 100px;
+}
+
+div#fake-huly {
+  position: relative;
+}
+
+img#fake-huly {
+  transform: scale(0.5);
+  transform-origin: top left;
+  visibility: hidden;
+}
+
+img#fake-huly.shown {
+  visibility: visible;
+}
+
+button#tab-flower-call {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 218px;
+  top: 24px;
+}
+
+button#status-flower-call {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  padding: 1px;
+  border-radius: 50%;
+  background-color: #efefef;
+  border: solid 1px grey;
+  left: 458px;
+  top: 324px;
+}
+
+button#status-flower-call:hover {
+  background-color: #e5e5e5;
+}
+
+button#status-flower-call > img {
+  position: relative;
+  width: 20px;
+  height: 18px;
+  top: 2px;
+}

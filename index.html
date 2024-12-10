@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="src/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Selection flower/wheel demo</title>
+</head>
+
+<body>
+
+  <div id="parameters">
+    <button type="button" onclick="addLeaf()">Add leaf</button>
+    <button type="button" onclick="removeLeaf()">Remove leaf</button>
+    <div>Radius</div>
+    <input type="range" id="flowerRadius" min="0" max="500" value="230" oninput="radiusChange()"/>
+    <div>Leaf cut-off</div>
+    <input type="range" id="leafCutoff" min="0" max="100" value="35" oninput="leafCutoffChange()"/>
+    <div>Leaf gap</div>
+    <input type="range" id="leafGap" min="0" max="20" value="4" oninput="leafGapChange()"/>
+    <div>Fake Huly</div>
+    <input type="checkbox" id="fakeHuly" onchange="fakeHulyChange()"/>
+  </div>
+
+  <div id="gap"></div>
+
+  <div id="fake-huly">
+    <img src="image/fake-huly.png" id="fake-huly"/>
+      <!-- flower for tab -->
+      <button type="button" id="tab-flower-call" onclick="showSelectionFlower1(event, this)">+</button>
+      <div class="selection-flower-container" id="tab-flower" onclick="flowerOnClick(event, this)">
+
+        <!-- Leaf template, must be present. Updated from js  -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="leaf" width="100%" height="100%" viewBox="0 0 100 100">
+          <symbol id="leaf">
+            <path d="M 0,0 L 100,0 L 100,100 L 0,100 Z"/>
+          </symbol>
+        </svg>
+
+        <!-- Put children for the leafs content here -->
+
+        <svg xmlns="http://www.w3.org/2000/svg">
+          <use href="image/0438144c4e551df3b6ecdfdd40255b7e.svg#calendar" />
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg">
+          <use href="image/faaccf7fffffda4c5772837d381b8048.svg#office" />
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg">
+          <use href="image/8b39c6a82822271ffed50a5fdc7ddc1d.svg#documentapplication" />
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg">
+          <use href="image/d7f9d030ccf121eb45efc25c9dd73cdf.svg#notifications" />
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg">
+          <use href="image/f4adfda18ef5cb28193fd0b3a26883c3.svg#chunter" />
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg">
+          <use href="image/4cb66efb137ce809f66335a1363399e1.svg#tracker" />
+        </svg>
+
+      </div>
+
+      <!-- flower for status -->
+      <button type="button" id="status-flower-call" onclick="showSelectionFlower2(event, this)"><img src="image/status-backlog.svg"/></button>
+      <div class="selection-flower-container" id="status-flower" onclick="flowerOnClick2(event, this)">
+        
+        <!-- Leaf template, must be present. Updated from js  -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="leaf" width="100%" height="100%" viewBox="0 0 100 100">
+          <symbol id="leaf">
+            <path d=""/>
+          </symbol>
+        </svg>
+
+        <img src="image/status-backlog.svg"/>
+        <img src="image/status-todo.svg"/>
+        <img src="image/status-inprogress.svg"/>
+        <img src="image/status-done.svg"/>
+        <img src="image/status-calceled.svg"/>
+
+      </div>
+
+  </div>
+
+  <script type="module" src="script.js">
+  </script>
+
+</body>
+</html>
