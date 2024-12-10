@@ -1,6 +1,6 @@
 // Code for the demo app
 
-import { updateLayout } from './src/flower.js';
+import { updateLayout } from './flower.js';
 
 updateLayout('tab-flower');
 updateLayout('status-flower');
