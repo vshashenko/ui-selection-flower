@@ -17,7 +17,7 @@ globalThis.removeLeaf = removeLeaf;
 globalThis.radiusChange = radiusChange;
 globalThis.leafCutoffChange = leafCutoffChange;
 globalThis.leafGapChange = leafGapChange;
-globalThis.fakeHulyChange = fakeHulyChange;
+globalThis.fakeProductChange = fakeProductChange;
 
 showSelectionFlower1();
 
@@ -96,7 +96,7 @@ function leafGapChange() {
   updateLayout('tab-flower');
 }
 
-function fakeHulyChange() {
-  const imageElement = document.querySelector('div#fake-huly > img');
+function fakeProductChange() {
+  const imageElement = document.querySelector('div#fake-product > img');
   imageElement.classList.toggle('shown');
 }

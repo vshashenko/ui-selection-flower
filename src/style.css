@@ -111,17 +111,17 @@ div#gap {
   height: 100px;
 }
 
-div#fake-huly {
+div#fake-product {
   position: relative;
 }
 
-img#fake-huly {
+img#fake-product {
   transform: scale(0.5);
   transform-origin: top left;
   visibility: hidden;
 }
 
-img#fake-huly.shown {
+img#fake-product.shown {
   visibility: visible;
 }
 

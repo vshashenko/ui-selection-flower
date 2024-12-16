@@ -19,14 +19,14 @@
     <input type="range" id="leafCutoff" min="0" max="100" value="35" oninput="leafCutoffChange()"/>
     <div>Leaf gap</div>
     <input type="range" id="leafGap" min="0" max="20" value="4" oninput="leafGapChange()"/>
-    <div>Fake Huly</div>
-    <input type="checkbox" id="fakeHuly" onchange="fakeHulyChange()"/>
+    <div>Fake product</div>
+    <input type="checkbox" id="fakeProduct" onchange="fakeProductChange()"/>
   </div>
 
   <div id="gap"></div>
 
-  <div id="fake-huly">
-    <img src="image/fake-huly.png" id="fake-huly"/>
+  <div id="fake-product">
+    <img src="image/fake-product.png" id="fake-product"/>
       <!-- flower for tab -->
       <button type="button" id="tab-flower-call" onclick="showSelectionFlower1(event, this)">+</button>
       <div class="selection-flower-container" id="tab-flower" onclick="flowerOnClick(event, this)">
