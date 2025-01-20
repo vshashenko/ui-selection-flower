@@ -105,10 +105,7 @@ div#parameters {
   grid-template-columns: 1fr 1fr;
   gap: 10px;
   width: 230px;
-}
-
-div#gap {
-  height: 100px;
+  margin-bottom: 100px;
 }
 
 div#fake-product {
